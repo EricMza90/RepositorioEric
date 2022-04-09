@@ -1,0 +1,795 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    background-image: url(./imagenes/Carrito.png);
+    background-size: cover;
+    font-family: "Fredoka", sans-serif;
+    overflow-x: hidden;
+    display: grid;
+    grid-template-rows: auto;
+    min-height: 120vh;
+    grid-template-columns: auto;
+    grid-template-areas:
+      "Encabezado"
+      "Contenido"
+      "PiePagina";
+  }
+  header {
+    grid-area: Encabezado;
+  }
+  main {
+    grid-area: Contenido;
+  }
+  footer {
+    grid-area: PiePagina;
+  }
+  header {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    align-items: center;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 140px;
+  }
+  .Header__Logo {
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  header nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+    gap: 1px;
+  }
+  header nav ul li{
+    transition:all 0.5s
+  }
+  header nav ul li:hover{
+    background-color:   rgb(196, 235, 112);
+    border-radius: 6px;
+    padding: 3px;
+  }
+  .Nav__Style {
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 8px;
+    color: black;
+  }
+  .Inicio {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .Texto__Inicio--Parrafo {
+    width: 200px;
+    height: auto;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 6px;
+    text-transform: initial;
+  }
+  .Texto__Inicio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .Img__Cupones {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  .Img__IQS {
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  .Img__IQS--Tam {
+    width: 200px;
+    height: 200px;
+  }
+  .Img__Cupones--Style {
+    width: 200px;
+    height: 300px;
+  }
+  .Valores__Gral {
+    display: grid;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  .NValores {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 200px;
+    height: 220px;
+    border-radius: 8px;
+    border: 5px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+  .Texto__Valores {
+    font-size: 15px;
+    margin-top: 15px;
+  }
+  .Img__Valores {
+    width: 80px;
+    height: 80px;
+    margin-top: 10px;
+  }
+  .Img--Secciones {
+    width: 120px;
+    height: 120px;
+  }
+  .Img__Ord {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .Registro {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  .Form--Re {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 8px;
+    width: 300px;
+    height: 300px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    font-style: initial;
+  }
+  .Img--IS {
+    width: 100px;
+    height: 100px;
+  }
+  .Sesion__Recupero {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  .Inicio__SR {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    width: 200px;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 6px;
+  }
+  .Funcion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  .Video--Funciones {
+    width: 200px;
+    height: 400px;
+  }
+  .Video {
+    width: 200px;
+    height: 400px;
+  }
+  .Funcion__Text {
+    margin-left: 15px;
+    margin-right: 15px;
+    padding: 16px;
+    border-radius: 8px;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  .Ayuda__Gral{
+    display: grid;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    gap: 15px;
+  }
+  .Help--Resp{
+      width: 200px;
+      height: auto;
+      background-color: rgba(0, 0, 0, 0.3);
+      border-radius: 6px;
+      text-transform: initial;
+  }
+  .Preguntas__Help{
+    width: 200px;
+    height: auto;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 6px;
+    text-transform: initial;
+    margin-bottom: 10px;
+  }
+  .Input--Ayuda{
+    margin-bottom: 10px;
+  }
+  .Lista__Help{
+    width: 200px;
+    height: 200px;
+  }
+  footer {
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    width: 100%;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 100px;
+  }
+  .Redes {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+  .Descargas {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-size: 10px;
+  }
+  .Re__Des--Img {
+    width: 20px;
+    height: 20px;
+  }
+  .Img--Copyright {
+    width: 10px;
+    height: 10px;
+  }
+  .Copyright {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-size: 10px;
+  }
+  .Texto--Footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 10px;
+  }
+  @media (min-width: 768px) {
+    body {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-areas:
+        "Encabezado Encabezado"
+        "Contenido Contenido"
+        "PiePagina PiePagina";
+    }
+    header {
+      display: grid;
+      grid-template-columns: 30% 70%;
+      align-items: center;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      height: 140px;
+    }
+    .Header__Logo {
+      display: flex;
+      flex-direction: row;
+      justify-content: start;
+      margin: 10px;
+    }
+    header nav ul {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-evenly;
+      list-style: none;
+      gap: 14px;
+    }
+    .Nav__Style {
+      text-transform: uppercase;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 10px;
+      color: black;
+    }
+    .Inicio {
+      display: grid;
+      grid-template-rows: repeat(2, 1fr);
+    }
+    .Texto__Inicio--Parrafo {
+      width: 250px;
+      height: 200px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: rgba(0, 0, 0, 0.3);
+      border-radius: 6px;
+      text-transform: initial;
+    }
+    .Texto__Inicio {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+    .Img__Cupones {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    .Img__IQS {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 20px;
+    }
+    .Img__IQS--Tam {
+      width: 300px;
+      height: 300px;
+    }
+    .Img__Cupones--Style {
+      width: 300px;
+      height: 400px;
+    }
+    .Valores__Gral {
+      display: grid;
+      justify-content: center;
+      margin-top: 30px;
+      margin-bottom: 30px;
+    }
+    .NValores {
+      display: grid;
+      flex-direction: column;
+      align-items: center;
+      background-color: rgba(0, 0, 0, 0.5);
+      width: 400px;
+      height: 250px;
+      border-radius: 8px;
+      border: 5px;
+      margin-top: 15px;
+      margin-bottom: 15px;
+    }
+    .Texto__Valores {
+      font-size: 20px;
+      margin-top: 15px;
+    }
+    .Img__Valores {
+      width: 120px;
+      height: 120px;
+      margin-top: 10px;
+    }
+    .Img--Secciones {
+      width: 120px;
+      height: 120px;
+    }
+    .Img__Ord {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .Registro {
+      display: grid;
+      grid-template-rows: repeat(2, 1fr);
+      justify-content: center;
+      margin-top: 30px;
+      margin-bottom: 30px;
+    }
+    .Form--Re {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 8px;
+      width: 400px;
+      height: 320px;
+      background-color: rgba(0, 0, 0, 0.5);
+      font-style: initial;
+    }
+    .Img--IS {
+      width: 100px;
+      height: 100px;
+    }
+    .Sesion__Recupero {
+      display: grid;
+      grid-template-rows: repeat(2, 1fr);
+      justify-content: center;
+      margin-top: 30px;
+      margin-bottom: 30px;
+    }
+    .Inicio__SR {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 30px;
+      margin-bottom: 50px;
+      width: 200px;
+      padding: 10px;
+      background-color: rgba(0, 0, 0, 0.5);
+      border-radius: 6px;
+    }
+    .Funcion {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: 1fr;
+      justify-items: center;
+      margin-top: 30px;
+      margin-bottom: 30px;
+    }
+    .Video--Funciones {
+      width: 300px;
+      height: 500px;
+    }
+    .Funcion__Text {
+      width: 300px;
+      height: auto;
+      margin-left: 15px;
+      margin-right: 15px;
+      padding: 16px;
+      border-radius: 8px;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+    .Ayuda__Gral{
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      justify-items: center;
+      margin-top: 30px;
+      margin-bottom: 30px;
+      gap: 15px;
+    }
+    .Help--Resp{
+        width: 400px;
+        height: auto;
+        background-color: rgba(0, 0, 0, 0.3);
+        border-radius: 6px;
+        text-transform: initial;
+    }
+    .Preguntas__Help{
+      width: 400px;
+      height: auto;
+      background-color: rgba(0, 0, 0, 0.3);
+      border-radius: 6px;
+      text-transform: initial;
+      margin-bottom: 10px;
+    }
+    .Input--Ayuda{
+      margin-bottom: 10px;
+    }
+    .Lista__Help{
+      width: 380px;
+      height: 200px;
+      padding: 8px;
+    }
+    footer {
+      display: grid;
+      grid-template-rows: repeat(4, 1fr);
+      width: 100%;
+      align-items: center;
+      background-color: rgba(0, 0, 0, 0.5);
+      height: 100px;
+    }
+    .Redes {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+    }
+    .Descargas {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      font-size: 10px;
+    }
+    .Re__Des--Img {
+      width: 20px;
+      height: 20px;
+    }
+    .Img--Copyright {
+      width: 10px;
+      height: 10px;
+    }
+    .Copyright {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      font-size: 10px;
+    }
+    .Texto--Footer {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      font-size: 10px;
+    }
+    @media (min-width: 1200px) {
+      body {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas:
+          "Encabezado Encabezado Encabezado "
+          "Contenido Contenido Contenido"
+          "PiePagina PiePagina PiePagina";
+      }
+      header {
+        display: grid;
+        grid-template-columns: 30% 70%;
+        align-items: center;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        height: 140px;
+      }
+      .Header__Logo {
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+        margin: 10px;
+      }
+      header nav ul {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+        list-style: none;
+        gap: 14px;
+      }
+      .Nav__Style {
+        text-transform: uppercase;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 15px;
+        color: black;
+      }
+      .Inicio {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr;
+      }
+      .Inicio__QS {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr;
+      }
+      .Texto__Inicio--Parrafo {
+        width: 300px;
+        height: 250px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(0, 0, 0, 0.3);
+        border-radius: 6px;
+        text-transform: initial;
+        padding: 10px;
+      }
+      .Texto__Inicio {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .Img__Cupones {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .Img__IQS {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 20px;
+      }
+      .Img__IQS--Tam {
+        width: 500px;
+        height: 500px;
+      }
+      .Img__Cupones--Style {
+        width: 300px;
+        height: 400px;
+      }
+      .Valores__Gral {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: center;
+        margin-top: 30px;
+        margin-bottom: 30px;
+      }
+      .NValores {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: rgba(0, 0, 0, 0.5);
+        width: 400px;
+        height: 220px;
+        border-radius: 8px;
+        border: 5px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+      }
+      .Texto__Valores {
+        font-size: 20px;
+        margin-top: 15px;
+      }
+      .Img__Valores {
+        width: 80px;
+        height: 80px;
+        margin-top: 10px;
+      }
+      .Img--Secciones {
+        width: 150px;
+        height: 150px;
+      }
+      .Img__Ord {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .Registro {
+        display: grid;
+        grid-template-rows: repeat(2, 1fr);
+        justify-content: center;
+        margin-top: 30px;
+        margin-bottom: 30px;
+      }
+      .Form--Re {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 8px;
+        width: 400px;
+        height: 320px;
+        background-color: rgba(0, 0, 0, 0.5);
+        font-style: initial;
+        color: rgb(196, 235, 112);
+      }
+      .Img--IS {
+        width: 100px;
+        height: 100px;
+      }
+      .Sesion__Recupero {
+        margin-top: 30px;
+        margin-bottom: 30px;
+      }
+      .Inicio__SR {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 30px;
+        margin-bottom: 50px;
+        width: 400px;
+        height: 250px;
+        padding: 10px;
+        background-color: rgba(0, 0, 0, 0.5);
+        border-radius: 6px; 
+      }
+      .Form__IS {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-top: 30px;
+      }
+      .Funcion {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: center;
+        margin-top: 30px;
+        margin-bottom: 30px;
+      }
+      .Video--Funciones {
+        width: 300px;
+        height: 600px;
+        margin-left: 70px;
+      }
+      .Funcion__Text {
+        width: 300px;
+        height: 400px;
+        margin-left: 15px;
+        margin-right: 15px;
+        padding: 16px;
+        border-radius: 8px;
+        background-color: rgba(0, 0, 0, 0.5);
+      }
+      .Ayuda__Gral{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: center;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        gap: 15px;
+      }
+      .Help--Resp{
+          width: 600px;
+          height: auto;
+          background-color: rgba(0, 0, 0, 0.3);
+          border-radius: 6px;
+          text-transform: initial;
+      }
+      .Preguntas__Help{
+        display: grid;
+        gap: 10px;
+        width: 600px;
+        height: auto;
+        list-style: circle;
+        padding: 10px;
+        background-color: rgba(0, 0, 0, 0.3);
+        border-radius: 6px;
+        text-transform: initial;
+        margin-bottom: 10px;
+      }
+      .Input--Ayuda{
+        margin-bottom: 10px;
+      }
+      .Lista__Help{
+        width: 580px;
+        height: 200px;
+      }
+      footer {
+        display: grid;
+        justify-content: end;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 1fr;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        height: 100px;
+      }
+      .Redes {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+      }
+      .Descargas {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+      }
+      .Re__Des--Img {
+        width: 40px;
+        height: 40px;
+      }
+    }
+    .Img--Copyright {
+      width: 15px;
+      height: 15px;
+    }
+    .Copyright {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      gap: 1px;
+    }
+    .Texto--Footer {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      font-size: 15px;
+    }
+  }
