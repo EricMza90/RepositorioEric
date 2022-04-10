@@ -53,8 +53,8 @@
     transition:all 0.5s
   }
   header nav ul li:hover{
-    background-color:   rgb(196, 235, 112);
-    border-radius: 6px;
+    background-color:   rgb(193, 241, 88);
+    border-radius: 2px;
     padding: 3px;
   }
   .Nav__Style {
@@ -115,7 +115,7 @@
     width: 200px;
     height: 300px;
   }
-  .Cupon-Box{
+  .Cupon--Box{
 
   animation: from-right 2s ease; 
 
