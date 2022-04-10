@@ -30,7 +30,7 @@
     grid-template-columns: 40% 60%;
     align-items: center;
     width: 100%;
-    background-image: linear-gradient(to top, rgba(0,0,0,0.5), rgb(187, 232, 105));
+    background-image: linear-gradient(to top, rgba(0,0,0,0.6), rgb(187, 232, 105));
     height: 140px;
   }
   .Header__Logo {
@@ -104,7 +104,7 @@
   @keyframes from-left {
     0%{
       opacity: 0;
-      transform: translateX(-80px);
+      transform: translateX(-90px);
     }
     100%{
       opacity: 1;
@@ -123,7 +123,7 @@
   @keyframes from-right {
     0%{
       opacity: 0;
-      transform: translateX(80px);
+      transform: translateX(90px);
     }
     100%{
       opacity: 1;
