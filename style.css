@@ -30,7 +30,7 @@
     grid-template-columns: 40% 60%;
     align-items: center;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-image: linear-gradient(to top, rgba(0,0,0,0.5), rgb(187, 232, 105));
     height: 140px;
   }
   .Header__Logo {
@@ -74,6 +74,7 @@
     background-color: rgba(0, 0, 0, 0.3);
     border-radius: 6px;
     text-transform: initial;
+    animation: from-top 2s ease;
   }
   .Texto__Inicio {
     display: flex;
@@ -98,10 +99,36 @@
   .Img__IQS--Tam {
     width: 200px;
     height: 200px;
+    animation: from-left 2s ease;
+  }
+  @keyframes from-left {
+    0%{
+      opacity: 0;
+      transform: translateX(-80px);
+    }
+    100%{
+      opacity: 1;
+      transform: translateX(0px);
+    }
   }
   .Img__Cupones--Style {
     width: 200px;
     height: 300px;
+  }
+  .Cupon-Box{
+
+  animation: from-right 2s ease; 
+
+  }
+  @keyframes from-right {
+    0%{
+      opacity: 0;
+      transform: translateX(80px);
+    }
+    100%{
+      opacity: 1;
+      transform: translateX(0px);
+    }
   }
   .Valores__Gral {
     display: grid;
@@ -120,6 +147,18 @@
     border: 5px;
     margin-top: 15px;
     margin-bottom: 15px;
+    animation: from-top 3s ease;
+  }
+  @keyframes from-top {
+    0%{
+      opacity: 0;
+      transform: translateY(90px);
+    }
+    100%{
+      opacity: 1;
+      transform:  translateY(0px);
+    }
+
   }
   .Texto__Valores {
     font-size: 15px;
@@ -752,7 +791,7 @@
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: 1fr;
         width: 100%;
-        background-color: rgba(0, 0, 0, 0.5);
+        background-image: linear-gradient(to bottom, rgba(0,0,0,0.7), rgb(187, 232, 105));
         height: 100px;
       }
       .Redes {
