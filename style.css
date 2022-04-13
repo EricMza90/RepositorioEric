@@ -32,6 +32,13 @@
     width: 100%;
     background-image: linear-gradient(to top, rgba(0,0,0,0.6), rgb(187, 232, 105));
     height: 140px;
+    text-transform: uppercase;
+    font-family: "Fredoka", sans-serif;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    color: black;
+    
   }
   .Header__Logo {
     width: 100px;
@@ -54,15 +61,7 @@
   }
   header nav ul li:hover{
     background-color:   rgb(193, 241, 88);
-    border-radius: 2px;
-    padding: 3px;
-  }
-  .Nav__Style {
-    text-transform: uppercase;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 8px;
-    color: black;
+    border-radius: 4px;
   }
   .Inicio {
     display: grid;
@@ -112,13 +111,9 @@
     }
   }
   .Img__Cupones--Style {
-    width: 200px;
-    height: 300px;
-  }
-  .Cupon--Box{
-
-  animation: from-right 2s ease; 
-
+    width: 500px;
+    height: 200px;
+    animation: from-right 2s ease;
   }
   @keyframes from-right {
     0%{
@@ -127,8 +122,12 @@
     }
     100%{
       opacity: 1;
-      transform: translateX(0px);
+      transform:  translateX(0px);
     }
+
+  }
+  .Cupon--Box{
+  animation: from-right 2s ease;
   }
   .Valores__Gral {
     display: grid;
@@ -646,8 +645,8 @@
         height: 500px;
       }
       .Img__Cupones--Style {
-        width: 300px;
-        height: 400px;
+        width: 500px;
+        height: 200px;
       }
       .Valores__Gral {
         display: grid;
