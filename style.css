@@ -246,8 +246,8 @@
     margin-bottom: 30px;
   }
   .Video--Funciones {
-    width: 250px;
-    height: 430px;
+    width: 270px;
+    height: 480px;
     margin-bottom: 50px;
     animation: from-right 1s ease;
   }
@@ -270,7 +270,7 @@
     background-color: rgba(0, 0, 0, 0.8);
     animation: from-left 1s ease;
     color: white;
-    width: 490px;
+    width: 450px;
   }
   @keyframes from-left {
     0%{
