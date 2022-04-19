@@ -1,89 +1,440 @@
-
-  body {
-    background-image: url(./imagenes/Carrito.png);
-    background-size: cover;
-    font-family: "Fredoka", sans-serif;
-    overflow-x: hidden;
-    display: grid;
-    grid-template-rows: auto;
-    min-height: 140vh;
-    grid-template-columns: auto;
-    grid-template-areas:
-      "Encabezado"
-      "Contenido"
-      "PiePagina";
+body {
+  background-image: url(./imagenes/Carrito.png);
+  background-size: cover;
+  font-family: "Fredoka", sans-serif;
+  overflow-x: hidden;
+  display: grid;
+  grid-template-rows: auto;
+  min-height: 140vh;
+  grid-template-columns: auto;
+  grid-template-areas:
+    "Encabezado"
+    "Contenido"
+    "PiePagina";
+}
+header {
+  grid-area: Encabezado;
+}
+main {
+  grid-area: Contenido;
+}
+footer {
+  grid-area: PiePagina;
+}
+header {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  align-items: center;
+  width: 100%;
+  background-image: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.6),
+    rgb(187, 232, 105)
+  );
+  height: 140px;
+  text-transform: uppercase;
+  font-family: "Fredoka", sans-serif;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 14px;
+  color: black;
+}
+main {
+  height: 130vh;
+}
+.Header__Logo {
+  width: 100px;
+  height: 100px;
+  margin: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+header nav ul li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  list-style: none;
+  gap: 6px;
+  transition: all 0.5s;
+}
+header nav ul li:hover {
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.9), 0 0 20px rgb(187, 232, 105);
+  outline-color: rgb(187, 232, 105);
+  text-shadow: 1px 1px 6px rgb(187, 232, 105);
+  border-radius: 90px;
+  padding: 4px;
+}
+.barra {
+  display: flex;
+  flex-direction: revert;
+  justify-content: flex-end;
+}
+.Inicio {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, 1fr);
+}
+.Texto__Inicio--Parrafo {
+  width: 350px;
+  height: 160px;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 6px;
+  text-transform: initial;
+  animation: from-top 2s ease;
+  color: white;
+}
+.Texto__QS--Parrafo {
+  width: 460px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 6px;
+  text-transform: initial;
+  padding: 10px;
+  font-family: "Fredoka", sans-serif;
+  color: white;
+  animation: from-top 2s ease;
+}
+.Texto__Inicio {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.Img__Cupones {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.Img__IQS {
+  width: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+.Img__IQS--Tam {
+  width: 400px;
+  height: 400px;
+  animation: from-left 2s ease;
+}
+@keyframes from-left {
+  0% {
+    opacity: 0;
+    transform: translateX(-90px);
   }
-  header {
-    grid-area: Encabezado;
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+.Img__Cupones--Style {
+  width: 350px;
+  height: 150px;
+  animation: from-right 0.5s ease;
+}
+@keyframes from-right {
+  0% {
+    opacity: 0;
+    transform: translateX(90px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+.Cupon--Box {
+  animation: from-right 2s ease;
+}
+.Valores__Gral {
+  display: grid;
+  justify-content: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.NValores {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  width: 380px;
+  height: auto;
+  border-radius: 8px;
+  border: 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  animation: from-top 3s ease;
+}
+@keyframes from-top {
+  0% {
+    opacity: 0;
+    transform: translateY(90px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+.Texto__Valores {
+  font-size: 15px;
+  margin-top: 15px;
+}
+.Img__Valores {
+  width: 80px;
+  height: 80px;
+  margin-top: 10px;
+}
+.Img--Secciones {
+  width: 120px;
+  height: 120px;
+}
+.Img__Ord {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.Registro {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  justify-content: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.Form--Re {
+  padding: 20px;
+  font-style: initial;
+  color: black;
+  font-family: "Fredoka", sans-serif;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 9px;
+  width: 400px;
+  margin-top: 90px;
+}
+.Img--IS {
+  width: 100px;
+  height: 100px;
+}
+.Sesion__Recupero {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  justify-content: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.Inicio__SR {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+  margin-bottom: 50px;
+  width: 200px;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 6px;
+}
+.Funcion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.Video--Funciones {
+  width: 270px;
+  height: 480px;
+  margin-bottom: 50px;
+  animation: from-right 1s ease;
+}
+@keyframes from-right {
+  0% {
+    opacity: 0;
+    transform: translateX(-90px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+.Funcion__Text {
+  margin-left: 15px;
+  margin-right: 15px;
+  padding: 16px;
+  border-radius: 8px;
+  background-color: rgba(0, 0, 0, 0.8);
+  animation: from-left 1s ease;
+  color: white;
+  width: 450px;
+}
+@keyframes from-left {
+  0% {
+    opacity: 0;
+    transform: translateX(90px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+.Ayuda__Gral {
+  display: grid;
+  justify-content: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  gap: 15px;
+  color: white;
+  font-size: medium;
+  font-family: "Fredoka", sans-serif;
+}
+.Help--Resp {
+  width: 200px;
+  height: auto;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 6px;
+  text-transform: initial;
+}
+.Preguntas__Help {
+  width: 450px;
+  height: auto;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 6px;
+  text-transform: initial;
+  padding: 10px;
+  font-size: 12px;
+}
+.Lista__Help {
+  width: 420px;
+  height: 50px;
+}
+footer {
+  display: grid;
+  justify-content: end;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  width: 100%;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.7),
+    rgb(187, 232, 105)
+  );
+  height: 120px;
+}
+.Redes {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  color: black;
+}
+.Descargas {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-size: 10px;
+  color: black;
+}
+.Re__Des--Img {
+  width: 25px;
+  height: 25px;
+  color: white;
+}
+.Img--Copyright {
+  width: 10px;
+  height: 10px;
+}
+.Copyright {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-size: 10px;
+  color: black;
+  font-family: "Fredoka", sans-serif;
+}
+.Texto--Footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 10px;
+}
+.Texto-Footer {
+  font-size: 12px;
+  font-family: "Fredoka", sans-serif;
+}
+@media (min-width: 768px) {
+  body {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "Encabezado Encabezado"
+      "Contenido Contenido"
+      "PiePagina PiePagina";
   }
   main {
-    grid-area: Contenido;
-  }
-  footer {
-    grid-area: PiePagina;
+    height: 130vh;
+    display: grid;
+    justify-content: center;
   }
   header {
     display: grid;
-    grid-template-columns: 40% 60%;
+    grid-template-columns: 30% 70%;
     align-items: center;
     width: 100%;
-    background-image: linear-gradient(to top, rgba(0,0,0,0.6), rgb(187, 232, 105));
+    background-color: rgba(0, 0, 0, 0.5);
     height: 140px;
-    text-transform: uppercase;
-    font-family: "Fredoka", sans-serif;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 14px;
-    color: black;
-    
   }
-  main{
-    height: 130vh;
-  }
+
   .Header__Logo {
-    width: 100px;
-    height: 100px;
-    margin: 20px;
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    align-items: center;
+    justify-content: start;
+    margin: 10px;
   }
-  header nav ul li{
+  header nav ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    list-style: none;
+    gap: 14px;
+  }
+  .Nav__Style {
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 10px;
+    color: black;
+  }
+  .Inicio {
     display: flex;
     flex-direction: column;
     align-items: center;
-    list-style: none;
-    gap: 6px;
-    transition:all 0.5s
-  }
-  header nav ul li:hover{
-    background-color:   rgb(193, 241, 88);
-    border-radius: 4px;
-  }
-  .barra{
-    display: flex;
-    flex-direction: revert;
-    justify-content: flex-end;
-  }
-  .Inicio {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(3, 1fr);
   }
   .Texto__Inicio--Parrafo {
-    width: 350px;
+    width: 710px;
     height: 160px;
-    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: rgba(0, 0, 0, 0.8);
     border-radius: 6px;
     text-transform: initial;
-    animation: from-top 2s ease;
     color: white;
   }
   .Texto__QS--Parrafo {
-    width: 460px;
-    height: 300px;
+    width: 500px;
+    height: 220px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -92,16 +443,13 @@
     text-transform: initial;
     padding: 10px;
     font-family: "Fredoka", sans-serif;
-    color:white;
-    animation: from-top 2s ease;
-    
+    color: black;
+    color: white;
   }
   .Texto__Inicio {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 20px;
-    margin-bottom: 20px;
   }
   .Img__Cupones {
     display: flex;
@@ -110,48 +458,23 @@
     margin-bottom: 20px;
   }
   .Img__IQS {
-    width: auto;
-    display: flex;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 100%;
     justify-content: center;
-    margin-top: 20px;
+    width: 400px;
+    height: 450px;
   }
   .Img__IQS--Tam {
     width: 400px;
-    height: 400px;
-    animation: from-left 2s ease;
-  }
-  @keyframes from-left {
-    0%{
-      opacity: 0;
-      transform: translateX(-90px);
-    }
-    100%{
-      opacity: 1;
-      transform: translateX(0px);
-    }
+    height: 350px;
   }
   .Img__Cupones--Style {
-    width: 350px;
-    height: 150px;
-    animation: from-right 2s ease;
-  }
-  @keyframes from-right {
-    0%{
-      opacity: 0;
-      transform: translateX(90px);
-    }
-    100%{
-      opacity: 1;
-      transform:  translateX(0px);
-    }
-
-  }
-  .Cupon--Box{
-  animation: from-right 2s ease;
+    width: 700px;
+    height: 250px;
   }
   .Valores__Gral {
     display: grid;
+    grid-template-columns: 100%;
     justify-content: center;
     margin-top: 30px;
     margin-bottom: 30px;
@@ -160,32 +483,21 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.8);
-    width: 380px;
-    height: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    font-family: "Fredoka", sans-serif;
+    width: 400px;
+    height: 200px;
     border-radius: 8px;
-    border: 5px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    animation: from-top 3s ease;
-  }
-  @keyframes from-top {
-    0%{
-      opacity: 0;
-      transform: translateY(90px);
-    }
-    100%{
-      opacity: 1;
-      transform:  translateY(0px);
-    }
-
+    margin-top: 15px;
+    margin-bottom: 15px;
+    color: black;
   }
   .Texto__Valores {
-    font-size: 15px;
+    font-size: 20px;
     margin-top: 15px;
   }
   .Img__Valores {
-    width: 80px;
+    width: 100px;
     height: 80px;
     margin-top: 10px;
   }
@@ -206,14 +518,13 @@
     margin-bottom: 30px;
   }
   .Form--Re {
-        padding: 20px;
-        font-style: initial;
-        color:black;
-        font-family: "Fredoka", sans-serif;
-        background-color: rgba(0, 0, 0, 0.8);
-        border-radius: 9px;
-        width: 400px;
-        margin-top: 90px;
+    padding: 20px;
+    font-style: initial;
+    color: black;
+    font-family: "Fredoka", sans-serif;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 9px;
+    width: 500px;
   }
   .Img--IS {
     width: 100px;
@@ -239,53 +550,31 @@
   }
   .Funcion {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-top: 30px;
-    margin-bottom: 30px;
+    justify-items: center;
+    margin-bottom: 10px;
   }
   .Video--Funciones {
-    width: 270px;
-    height: 480px;
-    margin-bottom: 50px;
-    animation: from-right 1s ease;
-  }
-  @keyframes from-right {
-    0%{
-      opacity: 0;
-      transform: translateX(-90px);
-    }
-    100%{
-      opacity: 1;
-      transform:  translateY(0px);
-    }
-
+    width: 300px;
+    height: 500px;
+    margin-top: 30px;
   }
   .Funcion__Text {
+    width: 80 0px;
+    height: auto;
     margin-left: 15px;
     margin-right: 15px;
     padding: 16px;
     border-radius: 8px;
     background-color: rgba(0, 0, 0, 0.8);
-    animation: from-left 1s ease;
     color: white;
-    width: 450px;
+    margin-top: 90px;
+    display: flex;
+    align-items: inherit;
   }
-  @keyframes from-left {
-    0%{
-      opacity: 0;
-      transform: translateX(90px);
-    }
-    100%{
-      opacity: 1;
-      transform:  translateY(0px);
-    }
-
-  }
-  .Ayuda__Gral{
+  .Ayuda__Gral {
     display: grid;
-    justify-content: center;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
     margin-top: 30px;
     margin-bottom: 30px;
     gap: 15px;
@@ -293,41 +582,46 @@
     font-size: medium;
     font-family: "Fredoka", sans-serif;
   }
-  .Help--Resp{
-      width: 200px;
-      height: auto;
-      background-color: rgba(0, 0, 0, 0.3);
-      border-radius: 6px;
-      text-transform: initial;
+  .Help--Resp {
+    width: 400px;
+    height: auto;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 6px;
+    text-transform: initial;
   }
-  .Preguntas__Help{
-    width: 450px;
+  .Preguntas__Help {
+    width: 400px;
     height: auto;
     background-color: rgba(0, 0, 0, 0.8);
     border-radius: 6px;
     text-transform: initial;
-    padding: 10px;
-    font-size: 12px;
+    margin-bottom: 10px;
   }
-  .Lista__Help{
-    width: 420px;
-    height: 50px;
+  .Lista__Help {
+    width: 380px;
+    height: 200px;
+    padding: 8px;
   }
-footer{
-  display: grid;
-  justify-content: end;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 1fr;
-  width: 100%;
-  background-image: linear-gradient(to bottom, rgba(0,0,0,0.7), rgb(187, 232, 105));
-  height: 120px;
-}  
+  footer {
+    display: grid;
+    justify-content: end;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    width: 100%;
+    background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.7),
+      rgb(187, 232, 105)
+    );
+    height: 120px;
+  }
   .Redes {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     gap: 10px;
+    font-size: 15px;
     color: black;
   }
   .Descargas {
@@ -336,13 +630,12 @@ footer{
     justify-content: center;
     align-items: center;
     gap: 10px;
-    font-size: 10px;
+    font-size: 15px;
     color: black;
   }
   .Re__Des--Img {
-    width: 25px;
-    height: 25px;
-    color: white;
+    width: 20px;
+    height: 20px;
   }
   .Img--Copyright {
     width: 10px;
@@ -355,9 +648,6 @@ footer{
     align-items: center;
     gap: 10px;
     font-size: 10px;
-    color: black;
-    font-family: "Fredoka", sans-serif;
-
   }
   .Texto--Footer {
     display: flex;
@@ -366,612 +656,341 @@ footer{
     align-items: center;
     font-size: 10px;
   }
-  .Texto-Footer{
-    font-size: 12px;
+}
+@media (min-width: 1200px) {
+  body {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+      "Encabezado Encabezado Encabezado "
+      "Contenido Contenido Contenido"
+      "PiePagina PiePagina PiePagina";
+  }
+  main {
+    height: 100vh;
+    margin-bottom: 80px;
+  }
+  header {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    align-items: center;
+    width: 100%;
+    background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.7),
+      rgb(187, 232, 105)
+    );
+    height: 140px;
+    text-transform: uppercase;
+    font-family: "Fredoka", sans-serif;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+  }
+  .Header__Logo {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    margin: 10px;
+  }
+  header nav ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    list-style: none;
+    gap: 14px;
+  }
+  .barra {
+    display: flex;
+    flex-direction: revert;
+    justify-content: flex-end;
+  }
+  .Nav__Style {
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 15px;
+    color: black;
+  }
+  .Inicio {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+  }
+  .Inicio__QS {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    align-items: center;
+  }
+  .Texto__Inicio--Parrafo {
+    width: 380px;
+    height: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 6px;
+    text-transform: initial;
+    padding: 10px;
+    font-family: "Fredoka", sans-serif;
+    color: white;
+    font-size: medium;
+  }
+  .Texto__QS--Parrafo {
+    width: 500px;
+    height: 220px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 6px;
+    text-transform: initial;
+    padding: 10px;
+    font-family: "Fredoka", sans-serif;
+    color: white;
+    font-size: medium;
+  }
+  .Texto__Inicio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .Img__Cupones {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .Img__IQS {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  .QS {
+    display: flex;
+    flex-direction: row;
+  }
+  .Img__IQS--Tam {
+    width: 450px;
+    height: 500px;
+  }
+  .Img__Cupones--Style {
+    width: 500px;
+    height: 260px;
+  }
+  .Valores__Gral {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    gap: 60px;
+    margin-top: 40px;
+    margin-bottom: 60px;
+    padding: 15px;
+  }
+  .NValores {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    font-family: "Fredoka", sans-serif;
+    width: 400px;
+    height: 250px;
+    border-radius: 8px;
+    border: 5px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    color: black;
+  }
+  .Texto__Valores {
+    font-size: 20px;
+    margin-top: 15px;
+    padding: 5px;
+  }
+  .Img__Valores {
+    width: 80px;
+    height: 80px;
+    margin-top: 10px;
+  }
+  .Img--Secciones {
+    width: 150px;
+    height: 150px;
+  }
+  .Img__Ord {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .Registro {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  .Form--Re {
+    padding: 20px;
+    font-style: initial;
+    color: black;
+    font-family: "Fredoka", sans-serif;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 9px;
+    margin-top: 30px;
+    width: 500px;
+  }
+  .Img--IS {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 50px;
+  }
+  .Sesion__Recupero {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  .Inicio__IS {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    width: 350px;
+    height: 450px;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 6px;
+  }
+  .Inicio__SR {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    width: 350px;
+    height: 350px;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 6px;
+  }
+  .Form__IS {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 50px;
+  }
+  .Funcion {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  .Video--Funciones {
+    width: 300px;
+    height: 600px;
+    margin-left: 70px;
+  }
+  .Funcion__Text {
+    width: 600px;
+    height: 320px;
+    margin-left: 15px;
+    margin-right: 15px;
+    padding: 16px;
+    border-radius: 8px;
+    font-family: "Fredoka", sans-serif;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  .Ayuda__Gral {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    gap: 8px;
+    color: white;
+    font-size: medium;
     font-family: "Fredoka", sans-serif;
   }
-  @media (min-width: 768px) {
-    body {
-      grid-template-columns: repeat(2, 1fr);
-      grid-template-areas:
-        "Encabezado Encabezado"
-        "Contenido Contenido"
-        "PiePagina PiePagina";
-    }
-    main{
-      height: 130vh;
-      display: grid;
-      justify-content: center;
-    }
-    header {
-      display: grid;
-      grid-template-columns: 30% 70%;
-      align-items: center;
-      width: 100%;
-      background-color: rgba(0, 0, 0, 0.5);
-      height: 140px;
-    }
-    
-    .Header__Logo {
-      display: flex;
-      flex-direction: row;
-      justify-content: start;
-      margin: 10px;
-    }
-    header nav ul {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: space-evenly;
-      list-style: none;
-      gap: 14px;
-    }
-    .Nav__Style {
-      text-transform: uppercase;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 10px;
-      color: black;
-    }
-    .Inicio {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-    .Texto__Inicio--Parrafo {
-      width: 710px;
-      height: 160px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background-color: rgba(0, 0, 0, 0.8);
-      border-radius: 6px;
-      text-transform: initial;
-      color: white;
-    }
-    .Texto__QS--Parrafo {
-      width: 500px;
-      height: 220px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background-color: rgba(0, 0, 0, 0.8);
-      border-radius: 6px;
-      text-transform: initial;
-      padding: 10px;
-      font-family: "Fredoka", sans-serif;
-      color: black;
-      color: white;
-    }
-    .Texto__Inicio {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    .Img__Cupones {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-bottom: 20px;
-    }
-    .Img__IQS {
-      display: grid;
-      grid-template-columns: 100%;
-      justify-content: center;
-      width: 400px;
-      height: 450px;
-    }
-    .Img__IQS--Tam {
-      width: 400px;
-      height: 350px;
-    }
-    .Img__Cupones--Style {
-      width: 700px;
-      height: 250px;
-    }
-    .Valores__Gral {
-      display: grid;
-      grid-template-columns: 100%;
-      justify-content: center;
-      margin-top: 30px;
-      margin-bottom: 30px;
-    }
-    .NValores {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      background-color: rgba(0, 0, 0, 0.5);
-      font-family: "Fredoka", sans-serif;
-      width: 400px;
-      height: 200px;
-      border-radius: 8px;
-      margin-top: 15px;
-      margin-bottom: 15px;
-      color: black;
-    }
-    .Texto__Valores {
-      font-size: 20px;
-      margin-top: 15px;
-    }
-    .Img__Valores {
-      width: 100px;
-      height: 80px;
-      margin-top: 10px;
-    }
-    .Img--Secciones {
-      width: 120px;
-      height: 120px;
-    }
-    .Img__Ord {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .Registro {
-      display: grid;
-      grid-template-rows: repeat(2, 1fr);
-      justify-content: center;
-      margin-top: 30px;
-      margin-bottom: 30px;
-    }
-    .Form--Re {
-      padding: 20px;
-        font-style: initial;
-        color:black;
-        font-family: "Fredoka", sans-serif;
-        background-color: rgba(0, 0, 0, 0.8);
-        border-radius: 9px;
-        width: 500px;
-
-    }
-    .Img--IS {
-      width: 100px;
-      height: 100px;
-    }
-    .Sesion__Recupero {
-      display: grid;
-      grid-template-rows: repeat(2, 1fr);
-      justify-content: center;
-      margin-top: 30px;
-      margin-bottom: 30px;
-    }
-    .Inicio__SR {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin-top: 30px;
-      margin-bottom: 50px;
-      width: 200px;
-      padding: 10px;
-      background-color: rgba(0, 0, 0, 0.5);
-      border-radius: 6px;
-    }
-    .Funcion {
-      display: flex;
-      justify-items: center;
-      margin-bottom: 10px;
-    }
-    .Video--Funciones {
-      width: 300px;
-      height: 500px;
-      margin-top: 30px;
-    }
-    .Funcion__Text {
-      width: 80 0px;
-      height: auto;
-      margin-left: 15px;
-      margin-right: 15px;
-      padding: 16px;
-      border-radius: 8px;
-      background-color: rgba(0, 0, 0, 0.8);
-      color: white;
-      margin-top: 90px;
-      display: flex;
-      align-items: inherit ;
-    }
-    .Ayuda__Gral{
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      justify-items: center;
-      margin-top: 30px;
-      margin-bottom: 30px;
-      gap: 15px;
-      color: white;
-      font-size: medium;
-      font-family: "Fredoka", sans-serif;
-    }
-    .Help--Resp{
-        width: 400px;
-        height: auto;
-        background-color: rgba(0, 0, 0, 0.3);
-        border-radius: 6px;
-        text-transform: initial;
-    }
-    .Preguntas__Help{
-      width: 400px;
-      height: auto;
-      background-color: rgba(0, 0, 0, 0.8);
-      border-radius: 6px;
-      text-transform: initial;
-      margin-bottom: 10px;
-    }
-    .Lista__Help{
-      width: 380px;
-      height: 200px;
-      padding: 8px;
-    }
-    footer {
-      display: grid;
-      justify-content: end;
-      grid-template-columns: repeat(3, 1fr);
-      grid-template-rows: 1fr;
-      width: 100%;
-      background-image: linear-gradient(to bottom, rgba(0,0,0,0.7), rgb(187, 232, 105));
-      height: 120px;
-    }
-    .Redes {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: center;
-      gap: 10px;
-      font-size: 15px;
-      color: black;
-      
-    }
-    .Descargas {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: center;
-      gap: 10px;
-      font-size: 15px;
-      color: black;
-    }
-    .Re__Des--Img {
-      width: 20px;
-      height: 20px;
-    }
-    .Img--Copyright {
-      width: 10px;
-      height: 10px;
-    }
-    .Copyright {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: center;
-      gap: 10px;
-      font-size: 10px;
-    }
-    .Texto--Footer {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: center;
-      font-size: 10px;
-    }
+  .Help--Resp {
+    width: 600px;
+    height: auto;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 6px;
+    text-transform: initial;
   }
-@media (min-width: 1200px) {
-      body {
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-areas:
-          "Encabezado Encabezado Encabezado "
-          "Contenido Contenido Contenido"
-          "PiePagina PiePagina PiePagina";
-      }
-      main{
-        height: 110vh;
-      }
-      header {
-        display: grid;
-        grid-template-columns: 30% 70%;
-        align-items: center;
-        width: 100%;
-        background-image: linear-gradient(to bottom, rgba(0,0,0,0.7), rgb(187, 232, 105));
-        height: 140px;
-        text-transform: uppercase;
-        font-family: "Fredoka", sans-serif;
-        text-decoration: none;
-        font-weight: bold;
-        font-size: 14px;
-      }
-      .Header__Logo {
-        display: flex;
-        flex-direction: row;
-        justify-content: start;
-        margin: 10px;
-      }
-      header nav ul {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-evenly;
-        list-style: none;
-        gap: 14px;
-      }
-      .barra{
-        display: flex;
-        flex-direction: revert;
-        justify-content: flex-end;
-      }
-      .Nav__Style {
-        text-transform: uppercase;
-        text-decoration: none;
-        font-weight: bold;
-        font-size: 15px;
-        color: black;
-      }
-      .Inicio {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: 1fr;
-      }
-      .Inicio__QS {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: 1fr;
-      }
-      .Texto__Inicio--Parrafo {
-        width: 380px;
-        height: 180px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: rgba(0, 0, 0, 0.8);
-        border-radius: 6px;
-        text-transform: initial;
-        padding: 10px;
-        font-family: "Fredoka", sans-serif;
-        color:white;
-        font-size: medium;
-      }
-      .Texto__QS--Parrafo {
-        width: 500px;
-        height: 220px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: rgba(0, 0, 0, 0.8);
-        border-radius: 6px;
-        text-transform: initial;
-        padding: 10px;
-        font-family: "Fredoka", sans-serif;
-        color: white;
-        font-size: medium;
-      }
-      .Texto__Inicio {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-      .Img__Cupones {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-      .Img__IQS {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-top: 20px;
-      }
-      .Img__IQS--Tam {
-        width: 450px;
-        height: 500px;
-      }
-      .Img__Cupones--Style {
-        width: 500px;
-        height: 260px;
-      }
-      .Valores__Gral {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        justify-items: center;
-        gap: 60px;
-        margin-top: 40px;
-        padding: 15px;
-      }
-      .NValores {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        background-color: rgba(0, 0, 0, 0.8);
-        font-family: "Fredoka", sans-serif;
-        width: 400px;
-        height: 250px;
-        border-radius: 8px;
-        border: 5px;
-        margin-top: 15px;
-        margin-bottom: 15px;
-        color: black;
-
-      }
-      .Texto__Valores {
-        font-size: 20px;
-        margin-top: 15px;
-        padding: 5px;
-      }
-      .Img__Valores {
-        width: 80px;
-        height: 80px;
-        margin-top: 10px;
-      }
-      .Img--Secciones {
-        width: 150px;
-        height: 150px;
-      }
-      .Img__Ord {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-      .Registro {
-        display: grid;
-        grid-template-rows: repeat(2, 1fr);
-        justify-content: center;
-        margin-top: 30px;
-        margin-bottom: 30px;
-      }
-      .Form--Re {
-        padding: 20px;
-        font-style: initial;
-        color:black;
-        font-family: "Fredoka", sans-serif;
-        background-color: rgba(0, 0, 0, 0.8);
-        border-radius: 9px;
-        margin-top: 80px;
-        width: 500px;
-      }
-      .Img--IS {
-        width: 100px;
-        height: 100px;
-        margin-bottom: 50px;
-      }
-      .Sesion__Recupero {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
-        margin-top: 30px;
-        margin-bottom: 30px;
-      }
-      .Inicio__IS {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-top: 30px;
-        margin-bottom: 50px;
-        width: 350px;
-        height: 450px;
-        padding: 10px;
-        background-color: rgba(0, 0, 0, 0.5);
-        border-radius: 6px; 
-      }
-      .Inicio__SR {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-top: 30px;
-        margin-bottom: 50px;
-        width: 350px;
-        height: 350px;
-        padding: 10px;
-        background-color: rgba(0, 0, 0, 0.5);
-        border-radius: 6px; 
-      }
-      .Form__IS {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        margin-top: 50px;
-      }
-      .Funcion {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        justify-content: center;
-        margin-top: 30px;
-        margin-bottom: 30px;
-      }
-      .Video--Funciones {
-        width: 300px;
-        height: 600px;
-        margin-left: 70px;
-      }
-      .Funcion__Text {
-        width: 600px;
-        height: 320px;
-        margin-left: 15px;
-        margin-right: 15px;
-        padding: 16px;
-        border-radius: 8px;
-        font-family: "Fredoka", sans-serif;
-        color: white;
-        background-color: rgba(0, 0, 0, 0.8);
-      }
-      .Ayuda__Gral{
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        justify-content: center;
-        gap: 8px;
-        color: white;
-        font-size: medium;
-        font-family: "Fredoka", sans-serif;
-      }
-      .Help--Resp{
-          width: 600px;
-          height: auto;
-          background-color: rgba(0, 0, 0, 0.3);
-          border-radius: 6px;
-          text-transform: initial;
-      }
-      .Preguntas__Help{
-        display: grid;
-        gap: 5px;
-        width: 600px;
-        height: auto;
-        list-style: circle;
-        padding: 10px;
-        background-color: rgba(0, 0, 0, 0.8);
-        border-radius: 6px;
-        text-transform: initial;
-        margin-bottom: 10px;
-        font-size: smaller;
-      }
-      .Lista__Help{
-        width: 580px;
-        height: 200px;
-      }
-      footer {
-        display: grid;
-        justify-content: end;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: 1fr;
-        width: 100%;
-        background-image: linear-gradient(to bottom, rgba(0,0,0,0.7), rgb(187, 232, 105));
-        height: 120px;
-      }
-      .Redes {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        gap: 15px;
-        color: black;
-        font-size: medium;
-      }
-      .Descargas {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        gap: 15px;
-        color: black;
-        font-size: medium;
-      }
-      .Re__Des--Img {
-        width: 40px;
-        height: 40px;
-      }
-    
-    .Img--Copyright {
-      width: 15px;
-      height: 15px;
-    }
-    .Copyright {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: center;
-      font-family: "Fredoka", sans-serif;
-      gap: 1px;
-      color: black;
-      font-size: medium;
-    }
-    .Texto--Footer {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: center;
-      font-size: 15px;
-    }
+  .Preguntas__Help {
+    display: grid;
+    gap: 5px;
+    width: 600px;
+    height: auto;
+    list-style: circle;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 6px;
+    text-transform: initial;
+    margin-bottom: 10px;
+    font-size: smaller;
   }
+  .Lista__Help {
+    width: 580px;
+    height: 200px;
+  }
+  footer {
+    display: grid;
+    justify-content: end;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    width: 100%;
+    background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.7),
+      rgb(187, 232, 105)
+    );
+    height: 120px;
+  }
+  .Redes {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    color: black;
+    font-size: medium;
+  }
+  .Descargas {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    color: black;
+    font-size: medium;
+  }
+  .Re__Des--Img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .Img--Copyright {
+    width: 15px;
+    height: 15px;
+  }
+  .Copyright {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-family: "Fredoka", sans-serif;
+    gap: 1px;
+    color: black;
+    font-size: medium;
+  }
+  .Texto--Footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+  }
+}
